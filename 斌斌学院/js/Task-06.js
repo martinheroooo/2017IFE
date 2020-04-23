@@ -13,11 +13,6 @@ document.getElementsByTagName("body")[0].appendChild(ul); //创建ul标签，并
 
 var item = []; //获取item数组
 
-// var li = document.getElementsByTagName("li");
-// for (var i = 0; i < li.length; i++) {
-// 	item.push(li[i].innerHTML);
-// }
-
 function Del() {
 	var li = document.getElementsByTagName("li");
 	for (var i = 0; i < li.length; i++) {
@@ -81,12 +76,10 @@ ul.onclick = function() {
 function searchBtn() {
 	var list = document.getElementById("search").value;
 	var data = document.getElementsByTagName("li");
-	// alert(list);
+
 	var myRe = new RegExp('list', 'g');
 	for (var i = 0; i < item.length; i++) {
-		// if (item[i].search(list) === 0) {
-		// 	data[i].style.backgroundColor = "red";
-		// }
+
 		if (item[i].match(list)!=null&&list!="") {
 			data[i].style.backgroundColor = "red";
 		}
