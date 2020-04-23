@@ -1,6 +1,7 @@
 # 2017 百度前端学院
 ## 斌斌学院 JS基础入门练习
 ### [任务一：零基础JavaScript编码（一）](http://ife.baidu.com/2017/course/detail/id/93)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-01.html)
 #### 任务目的:
 * JavaScript初体验
 * 初步明白JavaScript的简单基本语法，如变量、函数
