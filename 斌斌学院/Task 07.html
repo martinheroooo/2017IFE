@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>IFE JavaScript Task 07</title>
+		<link rel="stylesheet" href="css/Task7-二叉树.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="node" id="root">
+				A
+				<div class="node">
+					B
+					<div class="node">
+						D
+						<div class="node">
+							H
+						</div>
+						<div class="node">
+							I
+						</div>
+					</div>
+					<div class="node">
+						E
+						<div class="node">J</div>
+						<div class="node">K</div>
+					</div>
+				</div>
+				<div class="node">
+					C
+					<div class="node">
+						F
+						<div class="node">L</div>
+						<div class="node">M</div>
+					</div>
+					<div class="node">
+						G
+						<div class="node">N</div>
+						<div class="node">O</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="controller">
+			<input class="button" type="button" value="前序遍历" onclick="showPre()" />
+			<input class="button" type="button" value="中序遍历" onclick="showIn()" />
+			<input class="button" type="button" value="后序遍历" onclick="showPost()" />
+			<input id="btn1" class="button" type="button" value="停止" />
+		</div>
+	</body>
+	<script src="js/Task7-二叉树.js"></script>
+	
+</html>
