@@ -11,6 +11,7 @@
 * 参考以下示例代码，补充其中的JavaScript功能，完成一个JavaScript代码的编写
 * 本任务完成的功能为：用户可以在输入框中输入任何内容，点击“确认填写”按钮后，用户输入的内容会显示在“您输入的值是”文字的右边
 ### [任务二：零基础JavaScript编码（二）](http://ife.baidu.com/2017/course/detail/id/91)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-02.html)
 #### 任务目的
 * 在上一任务基础上继续JavaScript的体验
 * 学习JavaScript中的if判断语法，for循环语法
@@ -19,6 +20,7 @@
 #### 任务描述
 * 参考以下示例代码，页面加载后，将提供的空气质量数据数组，按照某种逻辑（比如空气质量大于60）进行过滤筛选，最后将符合条件的数据按照一定的格式要求显示在网页上
 ### [任务三：零基础JavaScript编码（三）](http://ife.baidu.com/2017/course/detail/id/98)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-03.html)
 #### 任务目的
 * 在上一任务基础上继续JavaScript的体验
 * 接触一下JavaScript中的高级选择器
@@ -28,6 +30,7 @@
 * 参考以下示例代码，读取页面上已有的source列表，从中提取出城市以及对应的空气质量
 * 将数据按照某种顺序排序后，在resort列表中按照顺序显示出来
 ### [任务四：基础JavaScript练习（一）](http://ife.baidu.com/2017/course/detail/id/103)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-04.html)
 #### 任务目的
 * 学习与实践JavaScript的基本语法、语言特性
 * 初步了解JavaScript的事件是什么
@@ -42,6 +45,7 @@
   - 点击"右侧出"，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；
   - 点击队列中任何一个元素，则该元素会被从队列中删除
 ### [任务五：基础JavaScript练习（二）](http://ife.baidu.com/2017/course/detail/id/105)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-05.html)
 #### 任务目的
 * 学习与实践JavaScript的基本语法、语言特性
 * 练习使用JavaScript实现简单的排序算法
@@ -52,6 +56,7 @@
 * 队列展现方式变化如图，直接用高度表示数字大小
 * 实现一个简单的排序功能，如冒泡排序（不限制具体算法），用可视化的方法表达出来，参考见下方参考资料
 ### [任务六：基础JavaScript练习（三）](http://ife.baidu.com/2017/course/detail/id/107)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-06.html)
 #### 任务目的
 * 实践JavaScript数组、字符串相关操作
 #### 任务描述
@@ -60,6 +65,7 @@
 * 允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔
 * 增加一个查询文本输入框，和一个查询按钮，当点击查询时，将查询词在各个元素内容中做模糊匹配，将匹配到的内容进行特殊标识，如文字颜色等。举例，内容中有abcd，查询词为ab或bc，则该内容需要标识
 ### [任务七：JavaScript和树（一）](http://ife.baidu.com/2017/course/detail/id/108)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-07.html)
 #### 任务目的
 * 熟练JavaScript
 * 学习树这种数据结构的基本知识
@@ -70,6 +76,7 @@
 * 当前被遍历到的节点做一个特殊显示（比如不同的颜色）
 * 每隔一段时间（500ms，1s等时间自定）再遍历下一个节点
 ### [任务八：JavaScript和树（二）](http://ife.baidu.com/2017/course/detail/id/110)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-08.html)
 #### 任务目的
 * 熟练JavaScript
 * 学习树这种数据结构的基本知识
@@ -80,6 +87,7 @@
 * 每隔一段时间（500ms，1s等时间自定）再遍历下一个节点
 * 增加一个输入框及一个“查询”按钮，点击按钮时，开始在树中以动画形式查找节点内容和输入框中内容一致的节点，找到后以特殊样式显示该节点，找不到的话给出找不到的提示。查询过程中的展示过程和遍历过程保持一致
 ### [任务九：JavaScript和树（三）](http://ife.baidu.com/2017/course/detail/id/111)
+### [Demo](https://martinheroooo.github.io/2017IFE/斌斌学院/Task-09.html)
 #### 任务目的
 * 熟练JavaScript
 * 学习树这种数据结构的基本知识
