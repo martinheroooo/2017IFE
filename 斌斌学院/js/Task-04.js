@@ -3,16 +3,10 @@ document.getElementById("right-in").addEventListener('click', rightIn, false);
 document.getElementById("left-out").addEventListener('click', leftOut, false);
 document.getElementById("right-out").addEventListener('click', rightOut, false);
 
-function check() {
-	var data = document.getElementById("data").value;
-	var list = data.split("，");
-	alert(list.length);
-}
 var ul = document.createElement("ul");
 document.getElementsByTagName("body")[0].appendChild(ul); //创建ul标签，并插入body中
 
 var item = []; //获取item数组
-
 function Del() {
 	var li = document.getElementsByTagName("li");
 	for (var i = 0; i < li.length; i++) {
@@ -42,52 +36,27 @@ function createData(item) {
 }
 
 function leftIn() {
-	var nums = document.getElementById("data").value;
-	data = nums.split(/[,\s\r]/);
-	for (var i = data.length - 1; i >= 0; i--) {
-		item.unshift(data[i]);
-	}
+	var nums = document.getElementById("nums").value;
+	item.unshift(nums);
 	createData(item);
 }
 
 function rightIn() {
-	var nums = document.getElementById("data").value;
-	data = nums.split(/[\s\n\r\，\,\、\t\ ]/);
-	for (var i = 0; i < data.length; i++) {
-		item.push(data[i]);
-	}
+	var nums = document.getElementById("nums").value;
+	item.push(nums);
 	createData(item);
 }
 
 function leftOut() {
-	var res = item.shift();
-	if (res) {
-		alert(res);
-		createData(item);
-	}
+	alert(item.shift());
+	createData(item);
 }
 
 function rightOut() {
-	var res = item.pop();
-	if (res) {
-		alert(res);
-		createData(item);
-	}
+	alert(item.pop());
+	createData(item);
 }
 
 ul.onclick = function() {
 	Del();
 };
-
-function searchBtn() {
-	var list = document.getElementById("search").value;
-	var data = document.getElementsByTagName("li");
-
-	var myRe = new RegExp('list', 'g');
-	for (var i = 0; i < item.length; i++) {
-
-		if (item[i].match(list) != null && list != "") {
-			data[i].style.backgroundColor = "red";
-		}
-	}
-}

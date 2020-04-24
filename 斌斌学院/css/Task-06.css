@@ -1,0 +1,63 @@
+	* {
+				margin: 0;
+				padding: 0;
+			}
+
+			#container {
+				display: flex;
+				align-items: flex-end;
+				padding: 10px;
+			}
+
+			li {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px;
+				list-style-type: none;
+				background-color: #2e7ec2;
+			}
+
+			.btn {
+				border: 1px solid #cccccc;
+				border-radius: 4px;
+				margin: 0 5px;
+				padding: 6px 16px;
+				width: auto;
+				height: 35px;
+				font-size: 16px;
+				font-family: 'Microsoft Yahei', Times, sans-serif;
+				background-color: #ffffff;
+				color: #333333;
+				cursor: pointer;
+			}
+
+			.btn:hover {
+				color: #333333;
+				background-color: #f5f5dc;
+			}
+
+			#search {
+				margin: 0 5px;
+				padding: 6px 5px;
+				border: 1px solid #cccccc;
+				border-radius: 4px;
+				width: auto;
+				height: 35px;
+				font-size: 14px;
+				line-height: 35px;
+				font-family: 'Microsoft Yahei', Times, sans-serif;
+				text-align: center;
+				background-color: #ffffff;
+				color: #333333;
+			}
+
+			#search::-ms-input-placeholder {
+				font-size: 14px;
+				text-align: center;
+			}
+
+			/* chrome 兼容性问题 */
+			#search::-webkit-input-placeholder {
+				font-size: 14px;
+				text-align: center;
+			}

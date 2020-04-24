@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	display: flex;
+	align-items: flex-end;
+	padding: 16px;
+}
+
+
+li {
+	display: inline-block;
+	margin: 5px;
+	padding: 10px;
+	list-style-type: none;
+	background-color: #2e7ec2;
+}
+
+.btn {
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	margin: 0 5px;
+	padding: 6px 16px;
+	width: 85px;
+	height: 35px;
+	font-size: 18px/30px;
+	font-family: 'Microsoft Yahei', Times, sans-serif;
+	background-color: #ffffff;
+	color: #333333;
+	cursor: pointer;
+}
+
+.btn:hover {
+	color: #333333;
+	background-color: #f5f5dc;
+}
+
+#nums {
+	margin: 0 5px;
+	padding: 6px 5px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	width: 190px;
+	height: 25px;
+	font-size: 12px;
+	font-family: 'Microsoft Yahei', Times, sans-serif;
+	text-align: center;
+	background-color: #ffffff;
+	color: #333333;
+	appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}

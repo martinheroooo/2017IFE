@@ -3,15 +3,23 @@ document.getElementById("right-in").addEventListener('click', rightIn, false);
 document.getElementById("left-out").addEventListener('click', leftOut, false);
 document.getElementById("right-out").addEventListener('click', rightOut, false);
 
-function check() {
-	var data = document.getElementById("data").value;
-	var list = data.split("，");
-	alert(list.length);
-}
 var ul = document.createElement("ul");
 document.getElementsByTagName("body")[0].appendChild(ul); //创建ul标签，并插入body中
 
 var item = []; //获取item数组
+
+function getValue(nums) {
+	if (nums < 10) {
+		alert("请输入大于10的数字");
+		return false;
+
+	} else if (nums > 100) {
+		alert("请输入小于100的数字");
+		return false;
+	} else {
+		return true;
+	}
+}
 
 function Del() {
 	var li = document.getElementsByTagName("li");
@@ -36,58 +44,59 @@ function createData(item) {
 	removeAllLi();
 	for (var j = 0; j < item.length; j++) {
 		var liCreate = document.createElement("li");
-		liCreate.innerHTML = item[j];
+		liCreate.style.height = item[j] + "px";
 		document.getElementsByTagName("ul")[0].appendChild(liCreate);
 	}
 }
 
 function leftIn() {
-	var nums = document.getElementById("data").value;
-	data = nums.split(/[,\s\r]/);
-	for (var i = data.length - 1; i >= 0; i--) {
-		item.unshift(data[i]);
+	var nums = document.getElementById("nums").value;
+	if (getValue(nums)) {
+		if (item.length < 60) {
+			item.unshift(nums);
+			createData(item);
+		} else {
+			alert("超过60个元素啦！");
+		}
 	}
-	createData(item);
 }
 
 function rightIn() {
-	var nums = document.getElementById("data").value;
-	data = nums.split(/[\s\n\r\，\,\、\t\ ]/);
-	for (var i = 0; i < data.length; i++) {
-		item.push(data[i]);
+	var nums = document.getElementById("nums").value;
+	if (getValue(nums)) {
+		if (item.length < 60) {
+			item.push(nums);
+			createData(item);
+		} else {
+			alert("超过60个元素啦！");
+		}
 	}
-	createData(item);
 }
 
 function leftOut() {
-	var res = item.shift();
-	if (res) {
-		alert(res);
-		createData(item);
-	}
+	item.shift();
+	createData(item);
 }
 
 function rightOut() {
-	var res = item.pop();
-	if (res) {
-		alert(res);
-		createData(item);
-	}
+	item.pop();
+	createData(item);
 }
 
 ul.onclick = function() {
 	Del();
 };
 
-function searchBtn() {
-	var list = document.getElementById("search").value;
-	var data = document.getElementsByTagName("li");
+function up() {
+	item.sort(function(x, y) {
+		return x - y;
+	});
+	createData(item);
+}
 
-	var myRe = new RegExp('list', 'g');
-	for (var i = 0; i < item.length; i++) {
-
-		if (item[i].match(list) != null && list != "") {
-			data[i].style.backgroundColor = "red";
-		}
-	}
+function down() {
+	item.sort(function(x, y) {
+		return y - x;
+	});
+	createData(item);
 }
