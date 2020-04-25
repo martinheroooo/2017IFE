@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Task1</title>
+		<link rel="stylesheet" href="css/Task-01.css" />
+	</head>
+	<body>
+		<form id="fm">
+			<div id="user-name-div">
+				<label class="text">用户名</label><br>
+				<input id="user-name" type="text" onblur="checkName()" onfocus="tipOfName()" />
+				<!-- <span id="user-name-span" ></span> -->
+			</div>
+			<div id="mail-div">
+				<label class="text">邮箱</label><br>
+				<input id="mail" type="email" onblur="checkMail()" onfocus="tipOfMail()" />
+			</div>
+			<div id="phone-div">
+				<label class="text">手机号码</label><br>
+				<input id="phone" onblur="checkPhone()" onfocus="tipOfPhone()" />
+			</div>
+			<div id="password1-div">
+				<label class="text">密码</label><br>
+				<input id="password1" type="password" onblur="checkPassword1()" onfocus="tipOfPassword1()" />
+			</div>
+			<div id="password2-div">
+				<label class="text">确认密码</label><br>
+				<input id="password2" type="password" onblur="checkPassword2()" onfocus="tipOfPassword2()" />
+			</div>
+			<button id="btn" onclick="check()" type="submit" value="提交">提交</button>
+		</form>
+		<script src="js/Task-01.js"></script>
+	</body>
+
+</html>
