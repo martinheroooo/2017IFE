@@ -79,6 +79,8 @@
 
 ### [任务二：表单（二）多个表单项的动态校验](http://ife.baidu.com/2017/course/detail/id/101)
 
+### [Demo](https://martinheroooo.github.io/2017IFE/耀耀学院/Task1-2.html)
+
 #### 任务描述
 
 - 基于[上一个任务](http://ife.baidu.com/course/detail/id/97)，在页面中添加多个表单
@@ -91,6 +93,8 @@
 
 ### [任务三：表单（三）联动](http://ife.baidu.com/2017/course/detail/id/106)
 
+[Demo](https://martinheroooo.github.io/2017IFE/耀耀学院/Task-03.html)
+
 #### 任务描述
 
 - 在页面中完成两个单选框，切换单选框的不同选项时下方显示的表单随之切换。
@@ -99,6 +103,8 @@
 - 城市及学校的数据随意编造即可，无需真实完整
 
 ### [任务四：听指令的小方块（一）](http://ife.baidu.com/2017/course/detail/id/109)
+
+[Demo](https://martinheroooo.github.io/2017IFE/耀耀学院/Task-04.html)
 
 #### 任务描述
 
