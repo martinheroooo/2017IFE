@@ -1,14 +1,6 @@
 var i = 0;
 var j = 0;
 
-//建立小方格
-var newDiv_1 = document.createElement("div"),
-	newDiv_2 = document.createElement("div");
-newDiv_1.className = "newSquare";
-newDiv_2.className = "newCell";
-document.getElementById("container").appendChild(newDiv_1);
-newDiv_1.appendChild(newDiv_2);
-
 //控制位置
 function getPosTop(i, j) {
 	return 1 + i * 41;
@@ -22,12 +14,6 @@ function getPosLeft(i, j) {
 (function getPos() {
 	for (var i = 0; i < 10; i++) {
 		for (var j = 0; j < 10; j++) {
-			//jQuery
-			// var gridCell = $("#grid-cell-" + i + "-" + j);
-			// gridCell.css('top', getPosTop(i, j));
-			// gridCell.css('left', getPosLeft(i, j));
-
-			//DOM
 			var gridCell = document.getElementById('grid-cell-' + i + '-' + j);
 			gridCell.style.left = getPosLeft(i, j) + "px";
 			gridCell.style.top = getPosTop(i, j) + "px";
@@ -37,7 +23,7 @@ function getPosLeft(i, j) {
 
 //移动动画
 function showMoveAnimation(i, j) {
-	$(".newSquare").animate({
+	$("#square").animate({
 		top: getPosTop(i, j),
 		left: getPosLeft(i, j)
 	}, 1000)
@@ -85,62 +71,52 @@ function traBot() {
 
 //旋转
 var angle = 0;
-var num = 0;
+function rotateSquare(angle) {
+	$("#square").css({
+		"transform": "rotate(" + angle + "deg)",
+		"transition": "transform 1s"
+	});
+}
 
 //左转90度
 function turnLeft() {
 	angle -= 90;
-	num -= 1;
-	$(".newSquare").css({
-		"transform": "rotate(" + angle + "deg)",
-		"transition": "transform 1s"
-	});
+	rotateSquare(angle);
 }
 
 //右转90度
 function turnRight() {
 	angle += 90;
-	num += 1;
-	$(".newSquare").css({
-		"transform": "rotate(" + angle + "deg)",
-		"transition": "transform 1s"
-	});
+	rotateSquare(angle);
 }
 
 //右转180度
 function turnBack() {
 	angle += 180;
-	num += 2;
-	$(".newSquare").css({
-		"transform": "rotate(" + angle + "deg)",
-		"transition": "transform 1s"
-	});
+	rotateSquare(angle);
 }
 
 //移动
 function goButton() {
-	var remain = num % 4;
+	var remain = angle % 360;
 	switch (remain) {
 		case 0:
 			// moveUp
 			traTop();
 			break;
-
 			// moveRight
-		case 1:
-		case -3:
+		case 90:
+		case -270:
 			traRig();
 			break;
-
 			//moveDown
-		case -2:
-		case 2:
+		case -180:
+		case 180:
 			traBot();
 			break;
-
 			//moveLeft
-		case 3:
-		case -1:
+		case 270:
+		case -90:
 			traLef()
 			break;
 	}
@@ -148,29 +124,28 @@ function goButton() {
 
 //方向转向左侧，左移一格
 function movLef() {
-	var remain = num % 4;
+	var remain = angle % 360;
 	switch (remain) {
 		//up
 		case 0:
 			turnLeft();
 			setTimeout("traLef()", 1000);
 			break;
-
 			// Right
-		case 1:
-		case -3:
+		case 90:
+		case -270:
 			turnBack();
 			setTimeout("traLef()", 1000);
 			break;
-
-			//Down
-		case 2:
-		case -2:
+			//down
+		case 180:
+		case -180:
 			turnRight();
 			setTimeout("traLef()", 1000);
 			break;
-		case 3:
-		case -1:
+			//left
+		case 270:
+		case -90:
 			traLef();
 			break;
 	}
@@ -178,30 +153,27 @@ function movLef() {
 
 //方向向上，上移一格
 function movTop() {
-	var remain = num % 4;
+	var remain = angle % 360;
 	switch (remain) {
-
 		//up
 		case 0:
 			traTop();
 			break;
 			// Right
-		case 1:
-		case -3:
+		case 90:
+		case -270:
 			turnLeftk();
 			setTimeout("traTop()", 1000);
 			break;
-
 			//Down
-		case 2:
-		case -2:
+		case 180:
+		case -180:
 			turnBack();
 			setTimeout("traTop()", 1000);
 			break;
-
 			//left
-		case -1:
-		case 3:
+		case -90:
+		case 270:
 			turnRight();
 			setTimeout("traTop()", 1000);
 			break;
@@ -210,30 +182,28 @@ function movTop() {
 
 //方向向右，右移一格
 function movRig() {
-	var remain = num % 4;
+	var remain = angle % 360;
 	console.log(remain);
 	switch (remain) {
-
 		//up
 		case 0:
 			turnRight();
 			setTimeout("traRig()", 1000);
 			break;
 			//right
-		case 1:
-		case -3:
+		case 90:
+		case -270:
 			traRig();
 			break;
 			//Down
-		case 2:
-		case -2:
+		case 180:
+		case -180:
 			turnLeft();
 			setTimeout("traRig()", 1000);
 			break;
-
 			//left
-		case 3:
-		case -1:
+		case 270:
+		case -90:
 			turnBack();
 			setTimeout("traRig()", 1000);
 			break;
@@ -242,30 +212,27 @@ function movRig() {
 
 //方向向下，下移一格
 function movBot() {
-	var remain = num % 4;
+	var remain = angle % 360;
 	switch (remain) {
 		//up
 		case 0:
 			turnBack();
 			setTimeout("traBot()", 1000);
 			break;
-
 			//down
-		case 2:
-		case -2:
+		case 180:
+		case -180:
 			traBot();
 			break;
-
 			// Right
-		case 1:
-		case -3:
+		case 90:
+		case -270:
 			turnRight();
 			setTimeout("traBot()", 1000);
 			break;
-
 			//left
-		case 3:
-		case -1:
+		case 270:
+		case -90:
 			turnLeft();
 			setTimeout("traBot()", 1000);
 			break;
@@ -274,12 +241,8 @@ function movBot() {
 
 //命令
 function moveSquare() {
-
-	//转化为大写
-	var command = document.getElementById("command-input").value.toUpperCase();
-
-	//去除空格
-	var res = command.split(" ").join("");
+	var command = document.getElementById("command-input").value.toUpperCase(); //转化为大写
+	var res = command.split(" ").join(""); //去除空格
 	if (!res) {
 		alert("命令不能为空！");
 	} else {
