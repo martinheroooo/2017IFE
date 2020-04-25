@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Task-04</title>
+		<title>Task-05</title>
 		<link rel="shortcut icon" href="img/Dawn.png" />
-		<link rel="stylesheet" href="css/Task-04.css" />
+		<link rel="stylesheet" href="css/Task-05.css" />
 
 		<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
 	</head>
@@ -123,16 +123,25 @@
 
 			</div>
 			<div id="controller">
-				<div><input id="act-go" class="btn" type="button" value="GO" onclick="goButton()" /><label>向蓝色边所面向的方向前进一格</label></div>
-				<div><input id="act-left" class="btn" type="button" value="TURN LEF" onclick="turnLeft()" /><label>向左转（逆时针旋转90度)</label></div>
-				<div><input id="act-right" class="btn" type="button" value="TURN RIG" onclick="turnRight()" /><label>向右转（顺时针旋转90度</label></div>
-				<div><input id="act-back" class="btn" type="button" value="TURN BAC" onclick="turnBack()" />
-					<label>向右转（旋转180度）</label></div>
-
-
-
+				<p><b>GO：</b>向蓝色边所面向的方向前进一格</p>
+				<p><b>TUN LEF：</b>向左转（逆时针旋转90度）</p>
+				<p><b>TUN RIG：</b>向右转（顺时针旋转90度）</p>
+				<p><b>TUN BAC：</b>向右转（旋转180度）</p>
+				<p><b>TRA LEF：</b>向屏幕的左侧移动一格，方向不变</p>
+				<p><b>TRA TOP：</b>向屏幕的上面移动一格，方向不变</p>
+				<p><b>TRA RIG：</b>向屏幕的右侧移动一格，方向不变</p>
+				<p><b>TRA BOT：</b>向屏幕的下面移动一格，方向不变</p>
+				<p><b>MOV LEF：</b>方向转向屏幕左侧，并向屏幕的左侧移动一格</p>
+				<p><b>MOV TOP：</b>方向转向屏幕上面，向屏幕的上面移动一格</p>
+				<p><b>MOV RIG：</b>方向转向屏幕右侧，向屏幕的右侧移动一格</p>
+				<p><b>MOV BOT：</b>方向转向屏幕下面，向屏幕的下面移动一格</p>
 			</div>
+
 		</div>
-		<script src="js/Task-04.js"></script>
+		<div id="command">
+			<input id="command-input" class="btn" type="text" />
+			<input id="command-btn" class="btn" value="MOVE" onclick="moveSquare()"/>
+		</div>
+		<script src="js/Task-05.js"></script>
 	</body>
 </html>
